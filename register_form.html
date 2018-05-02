@@ -1,0 +1,60 @@
+<!DoCTYPE html>
+<html>
+<head>
+<title>Student Registration Form</title>
+</head>
+<body>
+<background-color="blue">
+<center><h3>Student Registration Form</h3>
+
+<form method='post' action='cgi-bin/student_register.cgi' enctype="multipart/form-data">
+<table>
+<tr>
+<td>Name</td><td><input type="text" name='name'></td></tr>
+<tr><td>City :</td> <td><input type="text" name="city"></td></tr>
+<tr><td> DoB</td>
+<td>Day<select name='dd'>
+
+<script language="javascript" type="text/javascript"> 
+for(var d=01;d<=31;d++)
+{
+    document.write("<option>"+d+"</option>");
+}
+</script>
+</select>
+Month<select name='mm'>
+
+<script language="javascript" type="text/javascript"> 
+for(var m=1;m<=12;m++)
+{
+    document.write("<option>"+m+"</option>");
+}
+</script></select>Year<select name='yy'>
+<script language="javascript" type="text/javascript"> 
+for(var y=1980;y<2000;y++)
+{
+    document.write("<option>"+y+"</option>");
+}
+</script>
+
+</select>
+</td></tr>
+<tr><td colspan=3>Address</td></tr>
+<tr><td width='10%'>&nbsp;</td><td>Street1 <input type='text' name="strt1"></td></tr>
+<tr><td width='10%'>&nbsp;</td><td>Street2 <input type='text' name="strt2"></td></tr>
+<tr><td width='10%'>&nbsp;</td><td>Street3 <input type='text' name="strt3"></td></tr>
+<tr><td>Contact Number </td><td><input type='text' name="contact"></td></tr>
+<tr><td>State :</td><td><input type='text' name="state"></td></tr>
+<tr><td>Country :</td><td> <input type='text' name="country"></td></tr>
+<tr><td>Pin Code :</td> <td><input type="text" name="pin"></td>
+<tr><td>Email Address :</td><td><input type="text" name="email"></td>
+<tr><td>Password :</td><td><input type="password" name="pass"></td>
+<tr><td>Marks File :</td><td>(only PDF format)<input type="file" name="marks"></td>
+</tr>
+<tr><td colspan=3><input type="submit" name="submit"></td></tr>
+</tr>
+</table>
+</head>
+</form>
+</body>
+</html>
